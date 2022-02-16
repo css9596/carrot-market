@@ -24,8 +24,8 @@ const Home: NextPage = () => {
                     active:bg-yellow-500 focus:text-red-500">Checkout
                 </button>
             </div>
-            <div className="bg-white overflow-hidden rounded-3xl shadow-2xl">
-                <div className="bg-blue-500 p-6">
+            <div className="bg-white overflow-hidden rounded-3xl shadow-xl">
+                <div className="bg-blue-500 p-6 pb-14">
                     <span className="text-white text-2xl pb-14">Profile</span>
                 </div>
                 <div className="rounded-3xl p-6 bg-white relative -top-5">
