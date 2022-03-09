@@ -2,12 +2,14 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-    provider = "prisma-client-js"
+    provider        = "prisma-client-js"
+    previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
-    provider = "mysql"
-    url      = env("DATABASE_URL")
+    provider             = "mysql"
+    url                  = env("DATABASE_URL")
+    referentialIntegrity = "prisma"
 }
 
 // 용어 설명
@@ -18,7 +20,7 @@ datasource db {
 // @unique : 만약에 값이 있다면 유일해야 함.
 // @updatedAt : 수정이 될 때 변한다라는 것을 알림.
 model User {
-    id        Int      @id @defualt(autoincrement())
+    id        Int      @id @default(autoincrement())
     phone     Int?     @unique
     email     String?  @unique
     name      String
